@@ -46,8 +46,7 @@ app.get("/api/user/:id", (req, res, next) => {
 
 app.post("/api/user/", (req, res, next) => {
     var errors = []
-    console.log("req.body: ", req.body)
-    const body = JSON.parse(req.body);
+    const body = req.body;
     if (!body.password) {
         errors.push("No password specified");
     }
@@ -82,7 +81,7 @@ app.post("/api/user/", (req, res, next) => {
 })
 
 app.patch("/api/user/:id", (req, res, next) => {
-    const body = JSON.parse(req.body);
+    const body = req.body;
     var data = {
         name: body.name,
         email: body.email,
