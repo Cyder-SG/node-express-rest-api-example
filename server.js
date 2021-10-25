@@ -86,6 +86,13 @@ app.post("/api/invalid/user/", (req, res, next) => {
     res.json(body)
 })
 
+app.post("/api/echo/", (req, res, next) => {
+    var errors = []
+    console.log(res)
+    const body = req.body;
+    res.json(body)
+})
+
 app.patch("/api/user/:id", (req, res, next) => {
     const body = req.body;
     var data = {
