@@ -80,6 +80,12 @@ app.post("/api/user/", (req, res, next) => {
     });
 })
 
+app.post("/api/invalid/user/", (req, res, next) => {
+    var errors = []
+    const body = req.body;
+    res.json(body)
+})
+
 app.patch("/api/user/:id", (req, res, next) => {
     const body = req.body;
     var data = {
