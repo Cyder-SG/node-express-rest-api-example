@@ -88,9 +88,9 @@ app.post("/api/invalid/user/", (req, res, next) => {
 
 app.post("/api/echo/", (req, res, next) => {
     var errors = []
-    console.log("Headers: ", res.headers);
-    console.log("Params: ", res.params);
-    console.log("Query: ", res.query);
+    console.log("Headers: ", req.headers);
+    console.log("Params: ", req.params);
+    console.log("Query: ", req.query);
     const body = req.body;
     res.json(body)
 })
