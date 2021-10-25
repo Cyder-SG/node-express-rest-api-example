@@ -46,6 +46,7 @@ app.get("/api/user/:id", (req, res, next) => {
 
 app.post("/api/user/", (req, res, next) => {
     var errors = []
+    console.log("req.body: ", req.body)
     const body = JSON.parse(req.body);
     if (!body.password) {
         errors.push("No password specified");
