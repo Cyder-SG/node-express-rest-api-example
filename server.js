@@ -51,7 +51,7 @@ app.post("/api/user/", (req, res, next) => {
         errors.push("No password specified");
     }
     if (!body.name) {
-        errors.push("No password specified");
+        errors.push("No name specified");
     }
     if (!body.email) {
         errors.push("No email specified");
